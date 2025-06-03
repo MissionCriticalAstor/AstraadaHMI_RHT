@@ -11,11 +11,13 @@ Po pobraniu, należy w ustawieniach "MQTT Client" zmienić adres IP brokera oraz
 DOMYŚLNIE PROGRAM JEST DLA DWÓCH CZUJNIKÓW RHT Z MOŻLIWOŚCIĄ DODANIA WIĘKSZEJ ILOŚCI CZUJNIKÓW
 
 ABY DODAĆ NASTĘPNY CZUJNIK NALEŻY:
-∙ W ZAKŁADCE 'Tags -> Data Types -> Array Dimensions and Ranges -> High Bound -> Dim. 1' ZWIĘKSZYĆ TABLICE DLA ZMIENNYCH:
-	∙ czujnik; wynik_n; wynik_t; wynik_h; porownanie
 
-∙ DODAĆ DO 'Macros -> Native Scripts -> STALE' NASTĘPNĄ NAZWE CZUJNIKA: 0\czujnik[x] = "NAZWA CZUJNIKA
+- W ZAKŁADCE 'Tags -> Data Types -> Array Dimensions and Ranges -> High Bound -> Dim. 1' ZWIĘKSZYĆ TABLICE DLA ZMIENNYCH:
 
-∙ DODAĆ DO 'Macros -> Native Scripts -> CONVERT' NASTĘPNĄ PĘTLE 'IF' I 'porownanie', ODPOWIEDNIO WSTAWIAJĄC NUMER NASTĘPNEGO CZUJNIKA W MIEJSCE '[x]'
+  	- czujnik; wynik_n; wynik_t; wynik_h; porownanie
 
-∙ DODAĆ DO 'Screen 1 (#1)' MIEJSCA DO WYŚIETLANIA DANYCH Z NOWEGO CZUJNIKA
+- DODAĆ DO 'Macros -> Native Scripts -> STALE' NASTĘPNĄ NAZWE CZUJNIKA: 0\czujnik[x] = "NAZWA CZUJNIKA
+
+- DODAĆ DO 'Macros -> Native Scripts -> CONVERT' NASTĘPNĄ PĘTLE 'IF' I 'porownanie', ODPOWIEDNIO WSTAWIAJĄC NUMER NASTĘPNEGO CZUJNIKA W MIEJSCE '[x]'
+
+- DODAĆ DO 'Screen 1 (#1)' MIEJSCA DO WYŚIETLANIA DANYCH Z NOWEGO CZUJNIKA
